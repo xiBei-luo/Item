@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/search.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/sidebar.css">
+</head>
+<body>
+	<div id="header"></div>
+	<div id="search"></div>
+	<div id="main"></div>
+	<div id="footer"></div>
+	<div id="sidebar"></div>
+
+
+
+
+	<script src="js/jquery-3.2.1.js"></script>
+	<script>
+		$(function(){
+	        $("#header").load("module/header.html");
+	        $("#search").load("module/search.html");
+	        $("#main").load("module/main.html");
+	        $("#footer").load("module/footer.html");
+	        $("#sidebar").load("module/sidebar.html");
+	    });
+	</script>
+</body>
+</html>
