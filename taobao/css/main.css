@@ -22,6 +22,7 @@
 	padding: 0 8px;
 	font-weight: 700;
 }
+/* 橙色全屏导航条 */
 
 .main{
 	width: 100%;
@@ -77,38 +78,177 @@
 .bbl img{
 	margin:6px;
 }
+/* 左边列表和中间轮播图 */
 
 .headline{
 	width: 875px;
 	height: 99px;
-	background: red;
 	position: absolute;
 	bottom: 10px;
 	left: 0;
+	font-size: 12px;
+	background: #fff;
 }
+.headline p{
+	word-wrap: break-word;
+	word-break: normal;
+}
+.headline_l{
+	width: 180px;
+	height: 73px;
+	margin:20px 0;
+}
+.headline_r{
+	width: 676px;
+	height: 73px;
+	margin:20px 0;
+	padding-right: 10px;
+}
+.headline_l h3{
+	font-size: 32px;
+	margin-left: 20px;
+}
+.headline_l p{
+	margin: 10px 0 0 32px;
+}
+.headline_r img{
+	margin-right: 15px;
+}
+.headline_r h4{
+	font-size: 16px;
+}
+.headline_r span{
+	font-size: 12px;
+}
+.headline_r p{
+	margin-top: 10px;
+	line-height: 16px;
+}
+/* 左边列表和轮播图下方的淘宝头条 */
+
 
 
 .main_inner_login{
 	width: 302px;
 	background: #fff;
 	margin-top: 10px;
+	font-size: 12px;
+}
+.main_inner_login a{
+	text-decoration: none;
 }
 .main_inner_login .login{
 	height: 150px;
-	background: red;
+	position: relative;
 }
-.main_inner_login .tab{
-	height: 110px;
-	background: yellow;
+.login img,.login span,.login p,.login_b{
+	position: absolute;
+}
+.login img{
+	top: 5px;
+	left: 50%;
+	margin-left: -25px;
+}
+.login span{
+	top: 60px;
+	left: 50%;
+	margin-left: -18px;
+}
+.login p{
+	top: 80px;
+	left: 15%;
+}
+.login p a{
+	display: inline-block;
+	width: 102px;
+	height: 17px;
+	border-radius: 5px;
+	background: #ffe4db;
+	line-height: 17px;
+	text-align: center;
+	color: #ff5000;s
+}
+.login_b{
+	top: 110px;
+	font-size: 16px;
+	margin-left: 10px;
+}
+.login_b a{
+	width: 92px;
+	height: 25px;
+	background: #f40;
+	display: inline-block;
+	text-align: center;;line-height: 25px;
+	font-weight: bold;
+	border-radius: 5px;
+	color:#fff;
+}
+.tab .tit{
+	width: 292px;
+	height: 24px;
+	padding-top: 10px;
+}
+.tab .tit li{
+	display: inline-block;
+	margin:0 11px;
+	width: 32px;
+	line-height: 20px;
+	text-align: center;
+}
+.tit li:hover{
+	font-weight: 700px;
+	color:#f40;
+	border-bottom: 2px solid #f40;
+}
+.tab .hide{
+	width: 295px;
+	height: 65px;
+}
+.tab .hide li{
+	line-height: 22px;
+	padding-left: 15px;
+}
+.tab .hide li:first-child{
+	color:#f40;
 }
 .main_inner_login .list{
 	height: 235px;
-	background: green;
+	border: 3px solid red;
+}
+.list li{
+	width: 72px;
+	height: 77px;
+	background: red;
+	float: left;
+	border:1px solid #f5f5f5;
 }
 .main_inner_login .app{
-	height: 115px;
-	background: blue;
+	height: 125px;
 }
+.app h4{
+	width: 290px;
+	height: 25px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 30px;
+	padding-left: 15px;
+}
+.app .more{
+	padding-right: 10px;
+	font-weight: normal;
+	font-size: 12px;
+}
+.app ul{
+	margin-left: 15px;
+}
+.app li{
+	width: 32px;
+	height: 32px;
+	background: yellow;
+	display: inline-block;
+	margin:10px;
+}
+/* 右边登录信息一整块 */
 
 
 .life{
@@ -117,6 +257,16 @@
 	background: green;
 	margin:0px auto;
 }
+.life ul{
+	margin:0 13px;
+}
+.life li{
+	width: 194px;
+	height: 82px;
+	background: #8dc6aa;
+	float: left;
+}
+/* 生活研究所 */
 .recommend{
 	width: 1190px;
 	height: 658px;
@@ -134,6 +284,7 @@
 	height: 658px;
 	background: green;
 }
+/* 有好货+爱逛街 */
 
 .hot{
 	width: 1190px;
@@ -142,3 +293,4 @@
 	background: orange;
 	margin-top: 10px;
 }
+/* 热门信息——响应式图片 */
