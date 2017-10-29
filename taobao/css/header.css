@@ -14,7 +14,6 @@
 .site_nav li a{
 	line-height: 35px;
 	padding: 0 10px;
-	position: relative;
 	color:#6c6c6c;
 	text-decoration: none;
 	display: block;
@@ -24,7 +23,8 @@
 	border: 1px solid red;
 	border-top: none;
 	border-bottom: none;
-	margin-left: -1px;
+	padding:0 9px;
+
 }
 .site_nav_l{
 	float: left;

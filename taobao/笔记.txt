@@ -1,0 +1,7 @@
+解决li:hover下的元素抖动及位置变化问题；
+（1）li设置padding控制宽度
+li{padding:0 10px;}
+li:hover{border:1px solid;padding:0 9px;}
+（2）li直接设置宽度
+li{width:120px;}
+li:hover{border:1px solid;width:118px;}

@@ -27,6 +27,7 @@
 .main{
 	width: 100%;
 	background: #f5f5f5;
+	font-size: 12px;
 }
 .main_inner{
 	width: 1190px;
@@ -254,8 +255,19 @@
 .life{
 	width: 1190px;
 	height: 166px;
-	background: green;
 	margin:0px auto;
+	background: #fff;
+	position: relative;
+}
+.img_wrap{
+	height: 24px;
+	float: left;
+	margin:15px 0 0 15px;
+}
+.span_wrap{
+	display: inline-block;
+	margin:25px 0 0 15px;
+	color:#999;
 }
 .life ul{
 	margin:0 13px;
@@ -263,26 +275,67 @@
 .life li{
 	width: 194px;
 	height: 82px;
-	background: #8dc6aa;
 	float: left;
+	margin-top: 25px;
+}
+.life li img{
+	width: 80px;
+	height: 80px;
+	float: left;
+	border: 1px solid #13d0a1;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+.life li h4{
+	font-size: 16px;
+	line-height: 25px;
+}
+.life li p,.life li p{
+	line-height: 22px;
+	color:#666;
 }
 /* 生活研究所 */
 .recommend{
 	width: 1190px;
 	height: 658px;
-	background: yellow;
 	margin:0px auto;
 	margin-top: 10px;
 }
 .goods{
 	width: 590px;
 	height: 658px;
-	background: red;
+	background: #fff;
+}
+.goods_img{
+	margin:15px 4px 17px 20px;
+	width: 160px;
+	float: left;
+}
+.goods_img img{
+	height:180px;
+	background: #f4f4f4;
+}
+.goods_img h4{
+	font-size: 16px;
+	line-height: 28px;
+}
+.goods_img p{
+	color:#666;
+	text-align: center;
+	line-height: 22px;
+}
+.goods_img i{
+	color:#35b1ff;
+	display: block;
+	margin-top: 15px;
+	height: 22px;
+	line-height: 22px;
+	margin-left: 15px;
 }
 .shopping{
 	width: 590px;
 	height: 658px;
-	background: green;
+	background: #fff;
 }
 /* 有好货+爱逛街 */
 
@@ -290,7 +343,17 @@
 	width: 1190px;
 	height: 1450px;
 	margin:0 auto;
-	background: orange;
+	background: #fff;
 	margin-top: 10px;
+}
+.hot h3{
+	width: 1158px;
+	height: 30px;
+	font-size: 20px;
+	line-height: 30px;
+	color:#ff9f00;
+	padding:15px 0 10px 15px;
+	font-weight: bold;
+	border-bottom: 1px solid #f4f4f4;
 }
 /* 热门信息——响应式图片 */
