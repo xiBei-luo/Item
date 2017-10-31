@@ -1,32 +1,79 @@
 	<div class="container">
 		<div class="site_nav">
-			<ul class="site_nav_l">
-				<li><a href="#">中国大陆<i></i></a></li>
+			<ul class="site_nav_l fl">
+				<li><a href="#">中国大陆</a></li>
 				<li><a href="#"><em class="orange">亲，请登录</em> 免费注册</a></li>
 				<li><a href="#">手机逛淘宝</a></li>
 			</ul>
-			<ul class="site_nav_r">
-				<li><a href="#">我的淘宝<i></i></a></li>
-				<li><a href="#"><span></span>购物车<i></i></a></li>
-				<li><a href="#"><span></span>收藏夹<i></i></a></li>
+			<ul class="site_nav_r fr">
+				<li class="haveDropdown"><a href="#">我的淘宝</a></li>
+				<li><a href="#"><span></span>购物车</a></li>
+				<li class="haveDropdown"><a href="#"><span></span>收藏夹</a></li>
 				<li><a href="#">商品分类</a></li>
-				<li><a href="#">卖家中心<i></i></a></li>
-				<li><a href="#">联系客服<i></i></a></li>
-				<li><a href="#"><span></span>网站导航<i></i></a></li>
+				<li class="haveDropdown"><a href="#">卖家中心</a></li>
+				<li class="haveDropdown"><a href="#">联系客服</a></li>
+				<li><a href="#"><span></span>网站导航</a></li>
 			</ul>
-			<div class="dropdown_china">
-				<ul>
-					<li>马来西亚</li>
-					<li>马来西亚</li>
-					<li>马来西亚</li>
-					<li>马来西亚</li>
-					<li>马来西亚</li>
-					<li>马来西亚</li>
-					<li>马来西亚</li>
-					<li>马来西亚</li>
-					<li>马来西亚</li>
-					<li>马来西亚</li>
-				</ul>
-			</div>
 		</div>	
 	</div>
+
+	<div class="dropdown" id="dropdown">
+		<div id="mytaotao">
+			<ul>
+				<li>已买到的宝贝</li>
+				<li>我的足迹</li>
+			</ul>
+		</div>
+		<div id="favorite">
+			<ul>
+				<li>收藏的宝贝</li>
+				<li>收藏的店铺</li>
+			</ul>
+		</div>
+		<div id="sale">
+			<ul>
+				<li>免费开店</li>
+				<li>已卖出的宝贝</li>
+				<li>已出售的宝贝</li>
+				<li>卖家服务中心</li>
+				<li>卖家培训中心</li>
+				<li>体验中心</li>
+				<li>问商友</li>
+				<li>问商友</li>
+			</ul>
+		</div>
+		<div id="contact">
+			<ul>
+				<li>消费者客服</li>
+				<li>卖家客服</li>
+			</ul>
+		</div>
+	</div>
+
+
+
+
+
+
+	<script>
+		var aHaveDropdown=document.getElementsByClassName('haveDropdown'),
+			oDropdown=document.getElementsByClassName('dropdown')[0],
+			aDropdown=oDropdown.getElementsByTagName('div');
+
+		
+		for(var i=0;i<aHaveDropdown.length;i++){
+			aHaveDropdown[i].index=i;
+			aDropdown[i]=aHaveDropdown[i].onmouseover=show;
+			aDropdown[i]=aHaveDropdown[i].onmouseout=hide;
+		}
+
+		function show(){
+			for(var i=0;i<aHaveDropdown.length;i++){
+				aDropdown[i].style.display = 'none';
+			}
+			aDropdown[this.index].style.display = 'block';
+		}
+		function hide(){
+			aDropdown[this.index].style.display = 'none';
+		}
+	</script>

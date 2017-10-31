@@ -1,3 +1,5 @@
+li{cursor: pointer;}
+
 .orange{color:#f40;}
 .clearfix:after,
 .clearfix:before {

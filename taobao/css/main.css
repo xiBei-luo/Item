@@ -21,6 +21,7 @@
 	line-height: 30px;
 	padding: 0 8px;
 	font-weight: 700;
+	cursor: pointer;
 }
 /* 橙色全屏导航条 */
 
@@ -40,6 +41,8 @@
 	border:1px solid #f40;
 	overflow: hidden;
 	border-top: none;
+	background: #fff;
+	position: relative;
 }
 .main_inner_list li{
 	width: 155px;
@@ -54,6 +57,20 @@
 	background: #ffe4dc;
 	display: block;
 }
+/*左边列表*/
+
+.mainListHide{
+	width: 700px;
+	height: 509px;
+	background: #fff;
+	position: absolute;
+	left: 175px;
+	top: 0px;
+	border: 2px solid #f40;
+	display: none;
+}
+/*左边列表隐藏内容*/
+
 .main_inner_banner{
 	margin:10px;
 	height: 490px;
@@ -61,6 +78,9 @@
 .bt{
 	width: 690px;
 	height: 280px;
+}
+.btl li{
+	display: inline-block;
 }
 .btr img{
 	margin-left: 10px;
@@ -79,7 +99,7 @@
 .bbl img{
 	margin:6px;
 }
-/* 左边列表和中间轮播图 */
+/* 中间轮播图 */
 
 .headline{
 	width: 875px;
@@ -341,19 +361,58 @@
 
 .hot{
 	width: 1190px;
-	height: 1450px;
 	margin:0 auto;
-	background: #fff;
 	margin-top: 10px;
+	padding-bottom: 50px;
+	overflow: hidden;
 }
 .hot h3{
-	width: 1158px;
+	width: 1190px;
 	height: 30px;
 	font-size: 20px;
 	line-height: 30px;
 	color:#ff9f00;
+	background: #fff;
 	padding:15px 0 10px 15px;
 	font-weight: bold;
 	border-bottom: 1px solid #f4f4f4;
 }
+.hot_imgbox{
+	width: 197px;
+	height: 312px;
+	padding:20px;
+	border-right: 1px solid #f4f4f4;
+	border-bottom: 1px solid #f4f4f4;
+	display: inline-block;
+	margin-right: -3px;
+	background: #fff;
+}
+.hot_imgbox:hover{
+	border:1px solid #f40;
+	padding:20px 19px 19px 20px;
+}
+.hot_imgbox:nth-child(6),.hot_imgbox:nth-child(11),.hot_imgbox:nth-child(16){
+	border-right: none;
+}
+.hot img{
+	width: 198px;
+	height: 197px;
+}
+.hot p{
+	margin-top: 7px;
+	height: 44px;
+	font-size: 14px;
+	color:#666;
+	line-height: 22px;
+}
+.hot span{
+	display: block;
+	margin-top: 22px;
+	height: 24px;
+	line-height: 24px;
+	color:#f40;
+	font-weight: bold;
+	font-size: 18px;
+}
+
 /* 热门信息——响应式图片 */
