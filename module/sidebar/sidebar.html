@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		body{
+			height: 3000px;
+		}
+		.test{
+			width: 100px;
+			height: 100px;
+			background: blue;
+		}
+		.toolbar{
+			position: fixed;
+			right: 40px;
+			bottom: 60px;
+		}
+		.toolbar_item{
+			display: block;
+			background: url("toolbar.png") no-repeat;
+			width: 52px;
+			height: 52px;
+			position: relative;
+		}
+		.tool_layer{
+			width: 52px;
+			height: 52px;
+			display: inline-block;
+			position: absolute;
+			background: url("toolbar.png") no-repeat;
+			transition: all 0.5s ease-in-out;
+			top: 22px;
+			opacity: 0;
+		}
+		.tool_layer_one{
+			background-position: 0 -490px;
+		}
+		.tool_layer_two{
+			background-position: left bottom;
+		}
+		.tool_layer_thir{
+			background-position: 0 -740px;
+		}
+		/*二维码的位置*/
+		.tool_layer_big{
+			width: 180px;
+			height: 203px;
+			display: inline-block;
+			background: url("toolbar.png") no-repeat;
+			position: absolute;
+			top: -150px;
+			left: -170px;
+			background-position: left top;
+			transition: all 0.5s ease-in-out;
+			transform: scale(0.01);
+			transform-origin: right bottom;
+			opacity: 0;
+		}
+
+
+		/*每个item的位置以及划过item的样式*/
+		.toolbar_fadeback{
+			background-position: 0 -430px;
+		}
+		.toolbar_fadeback:hover .tool_layer_one{
+			top: 0;
+			opacity: 1;
+		}
+		.toolbar_app{
+			background-position: 0 -550px;
+			z-index: 2;
+		}
+		.toolbar_app:hover .tool_layer_big {
+			transform: scale(1);
+			opacity: 1;
+		}
+		.toolbar_num{
+			background-position: 0 -794px;
+		}
+		.toolbar_num:hover .tool_layer_two{
+			top: 2px;
+			opacity: 1;
+		}
+		.toolbar_top{
+			background-position: 0 -670px;
+			z-index: 2;
+		}
+		.toolbar_top:hover .tool_layer_thir{
+			top: 4px;
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<h1>我在第一页</h1>
+	<div class="toolbar">
+		<a href="javascript:;" class="toolbar_item toolbar_fadeback">
+			<span class="tool_layer tool_layer_one"></span>
+		</a>
+		<a href="javascript:;" class="toolbar_item toolbar_app">
+			<span class="tool_layer_big"></span>
+		</a>
+		<a href="javascript:;" class="toolbar_item toolbar_num">
+			<span class="tool_layer tool_layer_two"></span>
+		</a>
+		<a href="javascript:;" class="toolbar_item toolbar_top">
+			<span class="tool_layer tool_layer_thir"></span>
+		</a>
+	</div>
+
+
+	<script>
+		var oTop=document.querySelector('.toolbar_top');
+
+		oTop.onclick=function(){
+			document.documentElement.scrollTop=document.body.scrollTop=0;
+		}
+	</script>
+</body>
+</html>
