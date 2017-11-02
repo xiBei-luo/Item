@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+
+		.wrap{
+			width: 1200px;
+			height: 520px;
+			margin:100px auto;
+			border:1px solid red;
+		}
+		.bl{
+			float: left;
+			border: 1px solid green;
+			position: relative;
+		}
+		.bl span{
+			width: 300px;
+			height: 300px;
+			display: inline-block;
+			position: absolute;
+			background: yellow;
+			opacity: 0.4;
+			top: 0;
+			left: 0;
+			display: none;
+		}
+		.br{
+			width: 500px;
+			height: 500px;
+			overflow: hidden;
+			float: right;
+			border: 1px solid green;
+			display: none;
+			position: relative;
+		}
+		.br img{
+			width: 800px;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box">
+			<div class="bl">
+				<img src="small.jpg" alt="">
+				<span></span>
+			</div>
+			<div class="br">
+				<img src="big.jpg" alt="">
+			</div>
+		</div>
+	</div>
+
+
+
+	<script>
+		var oBl=document.querySelector('.bl'),
+			oSpan=oBl.getElementsByTagName('span')[0],
+			oBr=document.querySelector('.br'),
+			oImg=oBr.getElementsByTagName('img')[0];
+
+		oBl.onmouseover=function(){
+			oSpan.style.display = 'block';
+			oBr.style.display = 'block';
+			document.onmousemove=function(ev){
+				var oEvent=ev||event,
+					x=oEvent.clientX-oBl.getBoundingClientRect().left-oSpan.offsetWidth/2,
+					y=oEvent.clientY-oBl.getBoundingClientRect().top-oSpan.offsetHeight/2,
+
+					big_size=oImg.offsetWidth-oBr.offsetWidth,//计算右侧图片之于右侧盒子的距离
+					small_size=oBl.offsetWidth-oSpan.offsetWidth,//计算左侧span之于左侧侧盒子的距离
+
+					scale=big_size/small_size;//距离成比例保持不变
+
+				// 限制span的范围
+				if(x<=0) x=0;
+				if(x>=oBl.offsetWidth-oSpan.offsetWidth) x=oBl.offsetWidth-oSpan.offsetWidth;
+				if(y<=0) y=0;
+				if(y>=oBl.offsetHeight-oSpan.offsetHeight) y=oBl.offsetHeight-oSpan.offsetHeight;
+
+
+
+				// span的位置
+				oSpan.style.left=x+'px';
+				oSpan.style.top=y+'px';
+
+				// 右侧图片的位置
+				oImg.style.left=-x*scale+'px';
+				oImg.style.top=-y*scale+'px';
+			}
+		}
+		oBl.onmouseout=function(){
+			oSpan.style.display = 'none';
+			oBr.style.display = 'none';
+		}
+	</script>
+
+
+	<!-- 笔记：
+	放大镜原理：在左右两个盒子中，计算右侧图片之于右侧大盒子的距离，计算左侧遮罩之于左侧大盒子的距离，两者相除，使得距离保持不变，再用用鼠标位置*距离（注意此时为了实现图中效果需要用负数），从而实现效果；
+	注意事项：布局中左右两个盒子相对定位，遮罩和大图绝对定位； -->
+</body>
+</html>
