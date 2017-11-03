@@ -232,16 +232,19 @@
 .tab .hide li:first-child{
 	color:#f40;
 }
-.main_inner_login .list{
-	height: 235px;
-	border: 3px solid red;
+.list{
+	height: 237px;
 }
 .list li{
-	width: 72px;
+	width: 74px;
 	height: 77px;
 	background: red;
 	float: left;
-	border:1px solid #f5f5f5;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+}
+.list li:nth-child(4),.list li:nth-child(8),.list li:nth-child(12){
+	border-right: none;
 }
 .main_inner_login .app{
 	height: 125px;
@@ -265,7 +268,9 @@
 .app li{
 	width: 32px;
 	height: 32px;
-	background: yellow;
+	background: url("../img/right_app.webp");
+	background-position: center;
+	background-size: 32px 32px;
 	display: inline-block;
 	margin:10px;
 }
