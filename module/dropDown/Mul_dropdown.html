@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 14px;
+		}
+		li{
+			cursor: pointer;
+			color:#fff;
+			font-weight: bold;
+		}
+		.box{
+			width:1000px;
+			height: 500px;
+			margin:0 auto;
+		}
+		.one li{
+			display: inline-block;
+			background: #099BA3;
+			padding:5px 20px;
+		}
+		.one li:hover{
+			background:#0A5166;
+		}
+		.one li:nth-child(3){
+			position: relative;
+		}
+		.one li:nth-child(3):hover .two{
+			display: block;
+		}
+		.two li:nth-child(1):hover .thr{
+			display: block;
+		}
+		.two{
+			position: absolute;
+			top: 30px;
+			left: 0px;
+			display: none;
+		}
+		.two li{
+			width: 76px;
+			text-align: center;
+			background: #02A035;
+			border: 1px solid #000;
+		}
+		.two li:hover{
+			background: #087424;
+		}
+		.thr{
+			position: absolute;
+			left: 118px;
+			top: 0px;
+			display: none;
+		}
+		.thr li{
+			font-size: 12px;
+			display: inline-block;
+			text-align: center;
+			width: 80px;
+			background: #E22424;
+		}
+		.thr li:hover{
+			background: #8F0619;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="one">
+			<li>网站首页</li>
+			<li>课程大厅</li>
+			<li>学习中心+
+				<ul class="two">
+					<li>前端开发+
+						<ul class="thr">
+							<li>javascript</li>
+							<li>html</li>
+							<li>css</li>
+						</ul>
+					</li>
+					<li>手机开发</li>
+					<li>后端开发</li>
+				</ul>
+			</li>
+			<li>关于我们</li>
+		</ul>
+	</div>
+</body>
+</html>
