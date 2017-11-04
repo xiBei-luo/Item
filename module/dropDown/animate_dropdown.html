@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		.box{
+			width: 1000px;
+			height: 200px;
+			background: #ccc;
+			margin:200px auto 0;
+		}
+		.one{
+			position: relative;
+		}
+		.one li{
+			display: inline-block;
+			width: 120px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			background: red;
+			font-size: 18px;
+			font-weight: bold;
+			color: #fff;
+		}
+		.dropdown1:hover .l li,.dropdown2:hover .r li{
+			opacity: 1;
+			transform: translate(1,1);
+		}
+		.two{
+			position: absolute;
+			top: 40px;
+		}
+		.two li{
+			opacity: 0;
+			transition: all 0.5s ease-in-out;
+			transform: translate(0,0);
+			transform-origin: top;
+		}
+		.two li{
+			width: 90px;
+			height: 30px;
+			line-height: 30px;
+			background: green;
+			margin-top: 5px;
+			margin-left: -3px;
+			font-size: 12px;
+			font-weight: normal;
+		}
+		.r{
+			position: absolute;
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="one">
+			<li>网站首页</li>
+			<li class="dropdown1">课程大厅
+				<ul class="two l">
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>JAVASCRIPT</li>
+				</ul>
+			</li>
+			<li class="dropdown2">学习中心
+				<ul class="two r">
+					<li>JQUERY</li>
+					<li>BOOTSTRAP</li>
+					<li>NODEJS</li>
+				</ul>
+			</li>
+			<li>关于我们</li>
+		</ul>
+	</div>
+</body>
+</html>
