@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 14px;
+		}
+		li{
+			text-align: center;
+			padding:0 10px;
+			background: green;
+		}
+		.box{
+			width: 1000px;
+			height: 800px;
+			background: #ccc;
+			margin:100px auto 0;
+		}
+		.box ul li{
+			display: inline-block;
+			position: relative;
+			width: 120px;
+		}
+		.box ul li:hover{
+			background: red;
+		}
+		.box ul li:hover .two{
+			display: block;
+			width: 120px;
+		}
+		.box ul li:hover .thr{
+			display: none;
+		}
+		.box .two{
+			display: none;
+			position: absolute;
+			z-index: 2;
+			left: 0;
+		}
+		.box .thr{
+			display: none;
+			position: absolute;
+			left: 143px;
+			top: 0;
+		}
+		.box .two li:hover{
+			background: red;
+		}
+		.box .two li:hover .thr{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="one">
+			<li>网站首页</li>
+			<li>课程大厅</li>
+			<li>学习中心+
+				<ul class="two">
+					<li>前端开发+
+						<ul class="thr">
+							<li>javascript</li>
+							<li>html</li>
+							<li>css</li>
+						</ul>
+					</li>
+					<li>手机开发</li>
+					<li>后端开发</li>
+				</ul>
+			</li>
+			<li>关于我们+
+				<ul class="two">
+					<li>联系电话+
+						<ul class="thr">
+							<li>12222222222</li>
+							<li>22222222222</li>
+							<li>1111111</li>
+						</ul>
+					</li>
+					<li>qq号码</li>
+					<li>微信号码</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
