@@ -1,1 +1,46 @@
-<div class="sidebar"></div>
+<div class="sidebar">
+	<ul>
+		<li><a href="#">首页</a></li>
+		<li><a href="#">有好货</a></li>
+		<li><a href="#">猜你喜欢</a></li>
+		<li><a href="#">返回顶部</a></li>
+	</ul>
+</div>
+
+
+<script>
+	window.onscroll=function(){
+		var oSide=document.querySelector('.sidebar'),
+		aLi=oSide.querySelectorAll('li'),
+		t=document.documentElement.scrollTop||document.body.scrollTop;
+
+
+		if(t<840){
+			change();
+			aLi[0].style.background ='green';
+		}
+		if(t>500){
+			change();
+			aLi[1].style.background ='green';
+		}
+		if(t>1250){
+			change();
+			aLi[2].style.background ='green';
+		}
+
+
+		aLi[3].onclick=function(){
+			t=0;
+		}
+
+
+		function change(){
+			for(var i=0;i<aLi.length;i++){
+				aLi[i].style.background = '#DE470B';
+			}
+		}
+
+	}
+
+
+</script>

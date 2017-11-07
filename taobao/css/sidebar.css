@@ -6,4 +6,21 @@
 	right: 20px;
 	top: 35%;
 	border-radius: 10px;
+	font-size: 12px;
+}
+.sidebar li{
+	width: 50px;
+	height: 50px;
+	margin-top: 20px;
+	background: #DE470B;
+	text-align: center;
+}
+.sidebar li:hover{
+	background: green;
+}
+.sidebar li a{
+	line-height: 22px;
+	text-decoration: none;
+	color:#fff;
+	line-height: 50px;
 }
