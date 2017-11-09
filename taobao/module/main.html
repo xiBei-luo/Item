@@ -71,14 +71,14 @@
 		<!-- 中间轮播图开始 -->
 		<div class="main_inner_banner fl">
 			<div class="bt">
-				<div class="btl fl">
-					<ul>
+				<div class="btl fl" id="carousel">
+					<!-- <ul>
 						<li><img src="img/banner1.jpg" alt=""></li>
-						<!-- <li><img src="img/banner2.jpg" alt=""></li>
+						<li><img src="img/banner2.jpg" alt=""></li>
 						<li><img src="img/banner3.jpg" alt=""></li>
 						<li><img src="img/banner4.jpg" alt=""></li>
-						<li><img src="img/banner5.jpg" alt=""></li> -->
-					</ul>
+						<li><img src="img/banner5.jpg" alt=""></li>
+					</ul> -->
 				</div>
 				<div class="btr">
 					<img src="img/banner_2.jpg" width="160" height="280" alt="">
@@ -396,6 +396,9 @@
 
 
 <script>
+	$("#carousel").load("module/carousel.html");
+
+	
 	var oMainInnerList=document.getElementById('main_inner_list'),
 		aLi=oMainInnerList.getElementsByTagName('li'),
 		oMainListHide=document.getElementById('mainListHide'),
