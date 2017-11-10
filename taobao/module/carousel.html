@@ -1,4 +1,4 @@
-<ul class="main_inner_banner_carousel">
+<ul class="main_inner_banner_carousel clearfix">
 	<li><img src="img/banner1.jpg" alt=""></li>
 	<li><img src="img/banner2.jpg" alt=""></li>
 	<li><img src="img/banner3.jpg" alt=""></li>
@@ -7,5 +7,8 @@
 </ul>
 
 <script>
-	var oCarousel=document.querselector('.main_inner_banner_carousel'),
+	var oCarousel=document.getElementsByClassName('main_inner_banner_carousel')[0],
+		aLi=oCarousel.getElementsByTagName('li');
+	oCarousel.style.width=aLi.length*aLi[0].offsetWidth+'px';
+	console.log(oCarousel.style.width)
 </script>
