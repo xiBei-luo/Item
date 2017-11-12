@@ -1,0 +1,40 @@
+.box{
+	width: 520px;
+	height: 280px;
+	position: relative;
+	overflow: hidden;
+}
+.box li{
+	float: left;
+}
+#ul1{
+	position: absolute;
+	transition:all 0.5s;
+}
+#ul2{
+	position: absolute;
+	bottom: 0;
+	left: 45%;
+}
+#ul2 li{
+	width: 15px;
+	height: 15px;
+	background: red;
+	border-radius: 50%;
+	margin-left: 5px;
+}
+#ul2 .active{
+	background: blue;
+}
+.btn{
+	position: absolute;
+	top: 40%;
+	display: inline-block;
+	z-index: 99;
+	width: 50px;
+	height: 50px;
+	background: red;
+}
+#next{
+	right: 0;
+}
