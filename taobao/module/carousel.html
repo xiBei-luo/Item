@@ -13,8 +13,8 @@
 		<li></li>
 		<li></li>
 	</ul>
-	<a href="javascript:;" class="btn" id="prev">上一张</a>
-	<a href="javascript:;" class="btn" id="next">下一张</a>
+	<a href="javascript:;" id="prev"><i class="iconfont icon-xiangzuo"></i></a>
+	<a href="javascript:;" id="next"><i class="iconfont icon-xiangzuo1"></i></a>
 </div>
 
 <script>
@@ -51,9 +51,9 @@
 
 	function tab(){
 		for(var i=0;i<aPiont.length;i++){
-			aPiont[i].style.background = 'red';
+			aPiont[i].style.background = '#D8D4D4';
 		}
-		aPiont[iNow].style.background = 'blue';
+		aPiont[iNow].style.background = '#EB5C03';
 		oUl1.style.left=-iNow*aImg[0].offsetWidth+'px';
 	}
 </script>

@@ -64,6 +64,7 @@
 	height: 509px;
 	background: #fff;
 	position: absolute;
+	z-index: 999;
 	left: 175px;
 	top: 0px;
 	border: 2px solid #f40;
